@@ -1,34 +1,32 @@
 import React from 'react'
 import axios from 'axios'
-// const pk = localStorage.getAll('pk');
-const URL = 'http://localhost:8080/profile_pacient/19/';
+import Img from 'react-image'
+
 
 class PacientProfile extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            profile_first_name: '',
-            profile_last_name: '',
-            cnp: '',
-            phone_number: '',
-            caption: '',
-            blood_transfuzion: true,
-            profile_picture: null,
-            buletin_picture: null,
-            analize: null
+            fields: []
         }
         
     }
 
-    
 
     fetchData = () => {
-        const CONF = {
-            mode: 'cors'
-        }
-        axios.get(URL, CONF)
-            .then(response => {
+        const pk = localStorage.getItem('pk');
+        const URL = `http://localhost:8081/profile_pacient/${pk}/`;
+        // const CONF = {
+        //     mode: 'cors'
+        // }
+        console.log(URL)
+        axios.get(URL)
+            .then((response) => {
+                // this.dataToState(response.data)
+                
+                this.setState({fields: response.data})
+                console.log(this.state)
                 console.log(response);
             })
             .catch(error => {
@@ -36,15 +34,43 @@ class PacientProfile extends React.Component {
             })
     }
 
+    // submitHandler = (event) => {
+    //     event.preventDefault();
+    //     this.fetchData();
+    // }
+
+    fetchImage = (url) => {
+        fetch(url)
+            .then(response => {
+                if (response.statusText === 'OK') {
+                    return response;
+                } else {
+                    console.log("no image ")
+                }
+            })
+    }
+
     componentDidMount() {
-        this.fetchData();
+    this.fetchData();
     }
     
+    //O ROMANEASCA CORESPUNZATOARE,,,,,,,,,,,,,,
+    render() { 
+        // let img = Object.values(this.state.fields.profile_picture).toString();
 
-    render() {
         return(
             <div className='profileWrapper'>
-                <p>STATE FIELDS TEST EMPTY FOR NOW</p>      
+                
+                <Img src={this.state.fields.profile_picture} />
+                <p>STATE FIELDS TEST EMPTY FOR NOW</p>
+                <p>{this.state.fields.profile_first_name}</p>
+                <p>{this.state.fields.profile_last_name}</p>
+                <p>{this.state.fields.caption}</p>
+                <p>{this.state.fields.cnp}</p>
+                <p>{this.state.fields.phone_number}</p>
+                <Img src={this.state.fields.buletin_picture} />
+                <Img src={this.state.fields.analize}/>
+            
             </div>
         );
     }
