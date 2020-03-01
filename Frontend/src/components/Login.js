@@ -28,19 +28,20 @@ class Login extends React.Component {
         if(fields.data.token) {
             this.setState({isLogged: true});
             localStorage.setItem('token', fields.data.token);
-            
         }
     }
 
     submitHandler = (event) => {
         event.preventDefault();
-        const url = 'http://localhost:8080/login/';
+        const url = 'http://192.168.100.11:8081/login/';
         axios.post(url, this.state)
             .then(response => {
-                console.log(response);
+                console.log("LOGIN RESOPONSE" + " " + response.data.pacient);
                 this.validLogin(response);
                 localStorage.setItem('user', response.data.user);
                 localStorage.setItem('pk', response.data.pk);
+                localStorage.setItem('is_pacient', response.data.pacient)
+                localStorage.setItem('is_doctor', response.data.doctor)
             })
             .catch(error => {
                 console.log(error);
