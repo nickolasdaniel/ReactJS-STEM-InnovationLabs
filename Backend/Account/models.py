@@ -53,7 +53,7 @@ class CustomUser(AbstractUser):
 
     username = models.CharField(max_length=50,default="")
 
-    is_pacient = models.BooleanField('pacient',default='True')
+    is_pacient = models.BooleanField('pacient',default='False')
     is_doctor = models.BooleanField('doctor',default='False')
 
     USERNAME_FIELD = 'email'
