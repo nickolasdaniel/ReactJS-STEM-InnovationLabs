@@ -9,8 +9,8 @@ class Signup extends React.Component {
         super(props);
         
         this.state = {
-            isPacient: true,
-            isDoctor: false,
+            is_pacient: false,
+            is_doctor: false,
             first_name: '',
             last_name: '',
             email: '',
@@ -29,6 +29,14 @@ class Signup extends React.Component {
         this.setState({[event.target.name]: event.target.value})
     }
 
+    checkboxHandler = (event) => {
+        if(event.target.name === "is_pacient" && event.target.value === "on"){
+            this.setState({is_pacient: !this.state.is_pacient})
+        } else if (event.target.name === "is_doctor" && event.target.value ==="on") {
+            this.setState({is_doctor: !this.state.is_doctor})
+        }
+    }
+
     validSignup = (token) => {
         if(token) {
             this.setState({isSuccessful: true /*token: token}*/});
@@ -38,7 +46,8 @@ class Signup extends React.Component {
     submitHandler = (event) => {
         event.preventDefault();
         // const {token} = this.state;
-        const url = "http://localhost:8000/singup_pacient/"
+        const url = "http://192.168.100.11:8081/singup_pacient/"
+        console.log(this.state)
         axios.post(url, this.state)
             .then(response => {
                 console.log(response);
@@ -48,6 +57,7 @@ class Signup extends React.Component {
             .catch(error => {
                 console.log(error)
             })
+        // 
     }
 
     render() {
@@ -56,6 +66,9 @@ class Signup extends React.Component {
                 changeHandler={this.changeHandler}
                 submitHandler={this.submitHandler}
                 isSuccessful={this.state.isSuccessful}
+                checkboxHandler={this.checkboxHandler}
+                is_pacient={this.state.is_pacient}
+                is_doctor={this.state.is_doctor}
             />
         );
     }
