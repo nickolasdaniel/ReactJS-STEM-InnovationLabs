@@ -6,6 +6,9 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Profile from './components/Profile';
 import Homepage from './components/Homepage';
+import PacientProfile from './components/PacientProfile';
+import DoctorProfile from './components/DoctorProfile'
+import DoctorCreateProfile from './components/DoctorCreateProfile'
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
@@ -17,6 +20,9 @@ class Base extends React.Component {
                     <Route exact path="/" component = {Login} />
                     <Route path="/signup" component = {Signup} />
                     <Route path="/profile" component = {Profile} />
+                    <Route path='/pacient_profile' component = {PacientProfile} />
+                    <Route path='/doctor_profile_create' component = {DoctorCreateProfile} />
+                    <Route path='/doctor_profile_page' component = {DoctorProfile} />
                     <Route path='/homepage' component = {Homepage} />
                 </div>
             </Router>
