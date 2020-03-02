@@ -10,9 +10,10 @@ class Homepage extends React.Component {
             isLoggedOut: false,
             username:'',
             pk: null,
-            created: '',
-            is_doctor: null,
-            is_pacient: null
+            url: '',
+            created: false,
+            is_doctor: '',
+            is_pacient: ''
         }
         
         setTimeout(function(){
@@ -26,17 +27,27 @@ class Homepage extends React.Component {
             this.setState({pk: pk});
             this.setState({is_doctor: is_doctor})
             this.setState({is_pacient: is_pacient})
-            this.checkIfProfileIsCreated();
+            this.checkDocPacURL();
+            this.checkIfProfileIsCreated(this.state.url)
+            console.log(this.state)
         }.bind(this), 0);
         
     }
 
-    checkIfProfileIsCreated = () => {
-        
-        // console.log(pk)
-        const URL = `http://192.168.100.11:8081/profile_pacient/${this.state.pk}/`;
-        console.log(URL)
-        axios.get(URL)
+    checkDocPacURL = () => {
+        if(this.state.is_pacient === 'true') {
+            this.setState({url: `http://localhost:8000/profile_pacient/${this.state.pk}/`})
+            console.log('MERGE')
+        } else {
+            this.setState({url: `http://localhost:8000/profile_doctor/${this.state.pk}/`})
+            console.log('NE')
+        }
+    }
+
+    checkIfProfileIsCreated = (url) => {
+
+        console.log(url)
+        axios.get(url)
             .then((response) => {
                 if(response.data){
                     // return <Redirect to='/pacient_profile' />
@@ -58,8 +69,10 @@ class Homepage extends React.Component {
             return this.state.created ? '/doctor_profile_page' : '/doctor_profile_create'
         }
     }
+
     // componentDidMount() {
-    //     this.checkIfProfileIsCreated();
+    //     this.checkDocPacURL();
+    //     this.checkIfProfileIsCreated(this.state.url)
     // }
 
     logoutUser = () => {
