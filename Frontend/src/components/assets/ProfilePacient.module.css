@@ -1,0 +1,40 @@
+html,head{
+    /* background-image: url(./spills.png); */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    position: absolute;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-overflow-scrolling:touch;
+    overflow-x: hidden;
+  }
+
+div{
+    width: 100%;
+  }
+
+div,label,p,h4,span,input{
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
+.headline2{
+    font-size: 200%;
+    z-index: 3;
+}
+.Container12{
+    background-color: #FFFFFF;
+    width: 150vh;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 2%;
+    padding-top: 4%; 
+    left: 15%;
+    box-shadow: 2px 1px 15px 1px #0000004b;
+    z-index: 3;
+}
