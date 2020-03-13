@@ -1,0 +1,291 @@
+html,head{
+  max-width: 100%;
+    position: absolute;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-overflow-scrolling:touch;
+    overflow-x: hidden;
+  }
+.body1{
+  /* background-image: url(././spills.png);
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+  }
+  div{
+    width: 100%;
+  }
+  div,label,p,h4,span,input{
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+  }
+  .meddoc_img{
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    left: 15%;
+    bottom: 30%;
+  }
+  .menu_men{
+    background-color: #FFFFFF;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 8%;
+    overflow: hidden;
+    border-bottom:1px solid rgba(75, 75, 75, 0.37);
+    box-shadow: 1px 0px 5px 1px #0000004b;
+    z-index: 5;
+}
+.menu_men{
+    display: block;
+}
+.search{
+    position: relative;
+    display: block;
+    width: 23%;
+    top: 25%;
+    height: 50%;
+    left: 13%;
+    /* border-radius: 2px; */
+    border: 1px solid rgba(128, 128, 128, 0.514);
+    padding: 1%;
+    outline: #0059b3;
+    z-index: 2;
+}
+.search_button{
+    float: left;
+    position: relative;
+    left: 35.91%;
+    display: block;
+    top: -33%;
+    width: 9%;
+    height: 58%;
+    padding: 0%;
+    background-image: linear-gradient(to bottom right,#0059b3,#0059b3) ;
+    outline: #fefefe;
+    border-radius: 2px;
+    border: 1px solid #004e9c;
+    color: #fefefe;
+    border-left: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: 100;
+    z-index: 2;
+}
+.links{
+    position: relative;
+    display: block;
+    bottom: 40%;
+}
+.profile_prof,.profile_news,.profile_calendar,.profile_logout{
+    position: relative;
+    left: 42%;
+    margin: 4%;
+}
+.calendar:hover,.sell:hover,.logout:hover,.news:hover{
+    transition: 1s;
+    -webkit-filter:invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
+    filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
+    opacity: 1;
+}
+.profile_news{
+    margin-left: 12%;
+}
+.sell,.news,.logout,.calendar{
+    width: 2.5%;
+    opacity: 0.4;
+}
+
+  .Container1{
+    float: left;
+    position: relative;
+    width: 60vh;
+    height: 100vh;
+    background-color: #FFFFFF;
+    box-shadow: 10px 5px 25px 2px #0000004b;
+  }
+  .headline{
+    position: relative;;
+    margin-top: 35%;
+    left: 8%;
+    width: 65%;
+    font-size: 200%;
+    padding: 0px 20%;
+    box-sizing: border-box;
+    font-weight: bold;
+    letter-spacing: 1.01px;
+    color: #4B4B4B;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1.5px solid #0059b3;
+  }
+  a:link{
+    text-decoration: none;
+  }
+  a:visited{
+    color: #0059b3;
+  }
+  .nuaidejacont{
+    position: relative;
+    left: 11%;
+    display: inline;
+    font-size: 80%;
+    letter-spacing: 0.54px;
+  }
+  .em{
+    position: relative;
+    top: 5%;
+  }
+  .email{
+    background-color: rgba(255, 255, 255, 0.952);
+  }
+  .ps{
+    position: relative;
+    top: 10%;
+  }
+  .emai2{
+    font-size: 130%;
+    letter-spacing: 1.01px;
+    color: rgb(49, 49, 49);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2%;
+  }
+  .password2{
+    font-size: 130%;
+    letter-spacing: 1.01px;
+    color: rgb(49, 49, 49);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2%;
+  }
+  .email,.password{
+    background-color: rgba(255, 255, 255, 0.952);
+    width: 80%;
+    height: 40px;
+    border : none;
+    border-bottom: 1.5px solid #757575;
+    font-size: 90%;
+    padding-left: 10px;
+    outline: #0059b3;
+  }
+  .email:hover,.password:hover,.email:focus,.password:focus{
+    transition: 1s;
+    opacity: 1;
+    border-bottom: 1.5px solid #0059b3;
+    outline: #0059b3;
+  }
+  .Container3,.a{
+    left: 10%;
+  }
+  .Container2{
+    position: relative;
+    left: 10%;
+  }
+  .as{
+    top: 25%;
+    left: 25%;
+  }
+  .submit{
+    position: relative;
+    width: 50%;
+    height: 40px;
+    background-image: linear-gradient(to bottom right,#0059b3,#0059b3) ;
+    outline: #fefefe;
+    border-radius: 2px;
+    border: 0.5px solid #004e9c;
+    color: #fefefe;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110%;
+    font-weight: 100;
+    letter-spacing: 1.04px;
+    box-shadow:  3px 3px 15px 0.5px #757575;
+  }
+  .submit:focus{
+    left: 2px;
+    top: 2px;
+    box-shadow:  3px 3px 15px 0.5px inset #046acf;
+  }
+  .left{
+    position: relative;
+    top: 11.5%;
+    left: 25%;
+    z-index: 2;
+  }
+  .rememberme{
+    position: relative;
+    display: block;
+    cursor: default;
+    top: 7%;
+    right: 17%;
+    font-size: 80%;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
+  }
+  .rememb{
+    left: 7%;
+    width: 40%;
+  }
+  .rememberme input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkmark{
+    position: absolute;
+    cursor: pointer;
+    top: 0%;
+    left: 0%;
+    height: 17px;
+    width: 17px;
+    background-color: #fefefe;
+    border: 1.5px solid #999999;
+  }
+
+  .rememberme input:hover ~ .checkmark{
+    transition: 1s;
+    border-color: #0059b3;
+  }
+  .rememberme input:checked ~ .checkmark{
+    background-color: #fefefe;
+    border-color: #0059b3;
+  }
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .rememberme input:checked ~ .checkmark:after{
+    display: block;
+  }
+.rememberme .checkmark:after{
+    top: -1px;
+    left: 3px;
+    width: 4px;
+    height: 8.5px;
+      border: solid #0059b3;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  }
+  .right{
+    position: absolute;
+    top: 68%;
+  }
+  .forgotpas2s{
+    font-size: 80%;
+  }
+  .forgotpas2s{
+    position: relative;
+    left: 64%;
+  }

@@ -1,0 +1,147 @@
+html,head{
+    /* background-image: url(./spills.png); */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    position: absolute;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-overflow-scrolling:touch;
+    overflow-x: hidden;
+  }
+.singup{
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+}
+div{
+    width: 100%;
+  }
+
+div,label,p,h4,span,input{
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
+
+.Container1{
+    background-color: #FFFFFF;
+    width: 150vh;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 2%;
+    padding-top: 4%; 
+    left: 15%;
+    box-shadow: 2px 1px 15px 1px #0000004b;
+
+}
+.Container2d{
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    position: relative;
+    display: block;
+    margin-left: 10%;
+}
+.firstname_div_prof,.lastname_div_prof,.pnc_div,.id_div,.phonenr_label,.phonenrs_div,.blood_div,.medtests_div,.description_div{
+    position: relative;
+    margin-top: 3%; 
+}
+.firstname_input_prof,.lastname_input_prof,.pnc_input,.phonenr_input,.phonenrs_input,.description_input{
+    background-color: rgba(255, 255, 255, 0.952);
+    width: 40%;
+    height: 40px;
+    border : none;
+    border-bottom: 1.5px solid #757575;
+    font-size: 90%;
+    padding-left: 10px;
+    left: 1%;
+    outline: #0059b3;
+    margin-top: 6px;
+}
+.firstname_input_prof:hover,.lastname_input_prof:hover,.pnc_input:hover,.phonenr_input:hover,.phonenrs_input:hover,.description_input:hover,
+.firstname_input_prof:focus,.lastname_input_prof:focus,.pnc_input:focus,.phonenr_input:focus,.phonenrs_input:focus,.description_input:focus{
+    transition: 1s;
+    opacity: 1;
+    border-bottom: 1.5px solid #0059b3;
+    outline: #0059b3;
+}
+.id_div,.medtests_div{
+    margin-top: 5%; 
+}
+.id_label{
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    padding: 0%;
+    width: 30%; 
+    left: 4%;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #0059b3;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+}
+.id_input{
+    position: absolute;
+    display: block;
+    z-index: -1;
+    top: 6px;
+    left: 0;
+    font-size: 15px;
+    color: rgb(153,153,153);
+}
+.photo_img{
+    width: 30%;
+    position: relative;
+    padding-top: 25%;
+    left: 34%;
+}
+.choose_photo{
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    padding-bottom: 20%;
+    width: 100%;
+    /* left: 24%; */
+    text-align: center;
+
+    bottom: 20%;
+}
+.choose_file{
+    position: relative;
+    display:block;
+    text-align: center;
+}
+.blood_div{
+    left: 0%;
+}
+.blood_label{
+    position: relative;
+    margin-top: 1%; 
+    left: 1%;
+}
+.Container2s{
+    position: relative;
+    top: 3.5%;
+    left: 30%;
+}
+.buttons{
+    width: 35%;
+    padding: 1.3%;
+}
+.labels{
+   box-sizing: border-box;
+   display: block;
+}
+.remeb{
+    position: relative;
+    margin-right: 12%; 
+}
+.description_input{
+}
